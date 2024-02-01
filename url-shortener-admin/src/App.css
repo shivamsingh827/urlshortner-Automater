@@ -1,0 +1,310 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* AdminPage.css */
+
+.hidden {
+  display: none;
+}
+
+.admin-page-container {
+  max-width: 640px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.btn-add,
+.btn-shorten {
+  width: 100%;
+  background-color: #4caf50;
+  margin-top: 20px;
+  color: #fff;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-add:hover,
+.btn-shorten:hover {
+  background-color: #45a049;
+}
+
+.phone-number-list {
+  margin-top: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+li button {
+  background-color: #d9534f;
+  color: #fff;
+  padding: 5px;
+  font-size: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+li button:hover {
+  background-color: #c9302c;
+}
+
+.btn-stats {
+  background-color: #3498db; 
+  color: #fff;
+  padding: 10px 20px; 
+  font-size: 16px; 
+  border-radius: 5px; 
+  text-decoration: none; 
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+  margin-top: 15px;
+  display: inline-block; 
+}
+
+.btn-stats:hover {
+  background-color: #2980b9; /* Darker background color on hover */
+}
+
+/* StatsPage.css */
+
+.stats-container {
+  margin: 20px;
+}
+
+.download-button {
+  /* display: none; */
+  width: 100%;
+  padding: 10px;
+  background-color: #1890ff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px; /* Add margin-top for spacing */
+}
+
+.download-button.hidden {
+  display: none;
+}
+
+/* styles.css */
+
+.stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.stats-table th, .stats-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.stats-table th {
+  background-color: #f2f2f2;
+  width: 33.33%; /* Divide equally for three columns */
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+/* Add more styles as needed */
+
+
+
+/* YourComponent.css */
+
+.shortened-urls-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Adjust the z-index to make sure it appears above other content */
+}
+
+.shortened-urls-list {
+  width: 100vw; /* Adjust the width as needed */
+  max-width: 600px; /* Set a maximum width if desired */
+  background: #fff;
+  /* margin-left: 100px; */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.shortened-urls-list h3 {
+  color: #333;
+}
+
+.shortened-urls-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.shortened-urls-list li {
+  margin-bottom: 10px;
+}
+
+.shortened-urls-list strong {
+  margin-left: 10px;
+  margin-right: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Navbar.css */
+
+.navbar {
+  background-color: #4aa8e7; /* Standard blue color */
+  overflow: hidden;
+}
+
+.nav-link {
+  float: left;
+  width: 50%;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  box-sizing: border-box;
+  border-right: 1px solid #6dc0f8; /* Darker blue border between links */
+}
+
+.nav-link:last-child {
+  border-right: none; /* Remove border for the last link */
+}
+
+.nav-link:hover {
+  background-color: #94caee; /* Darker blue on hover */
+  color: white;
+}
+
+
+/* Add this to your CSS file */
+
+.btn-shorten {
+  /* Your existing styles for the button */
+
+  /* Add the following styles for the blur effect */
+  filter: blur(0); /* No blur by default */
+  transition: filter 0.3s ease; /* Transition for a smoother effect */
+}
+
+.btn-shorten.blurred {
+  filter: blur(1px); /* Apply blur when not valid */
+  cursor: not-allowed; /* Change cursor to indicate the button is not clickable */
+}
+
+
+.searchStat{
+  display: flex;
+  justify-content: center;
+  flex:1;
+}
+
+
+.search-bar {
+  display: flex;
+  align-items: center;
+
+}
+
+.search-input {
+  margin-right: 10px;
+  
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  padding: 8px;
+  font-size: 14px;
+}
+
+.search-button {
+  padding: auto; 
+  background-color: #007bff;
+  margin-top: 14px;
+  height: 34px; 
+  font-size: 18px;
+
+  width: 150px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px; 
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+.search-button:hover {
+  background-color: #0056b3; /* Darker color on hover */
+}
+
